@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donation Received</title>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fb;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+    "
+  >
+    <div
+      style="
+        max-width: 650px;
+        margin: 40px auto;
+        background: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+      "
+    >
+      <div
+        style="
+          background: linear-gradient(135deg, #2563eb, #1d4ed8);
+          padding: 32px 24px;
+          text-align: center;
+          color: #ffffff;
+        "
+      >
+        <h1 style="margin: 0 0 8px; font-size: 28px">
+          🎉 New Donation Received
+        </h1>
+        <p style="margin: 0; font-size: 15px; opacity: 0.95">
+          A successful Paymongo donation has been completed.
+        </p>
+      </div>
+
+      <div style="padding: 32px 24px 24px">
+        <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.6">
+          A new donation was successfully processed. Below are the details
+          received from {{donationMethod}}.
+        </p>
+
+        <div
+          style="
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 16px;
+          "
+        >
+          <p style="margin: 0 0 8px; font-size: 14px; color: #64748b">
+            Donor Information
+          </p>
+          <p style="margin: 4px 0; font-size: 16px">
+            <strong>Name:</strong> {{givenName}}
+          </p>
+          <p style="margin: 4px 0; font-size: 16px">
+            <strong>Email:</strong> {{emailAdd}}
+          </p>
+          <p style="margin: 4px 0; font-size: 16px">
+            <strong>Intent ID:</strong> {{intentId}}
+          </p>
+        </div>
+
+        <div
+          style="
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 18px 20px;
+          "
+        >
+          <p style="margin: 0 0 8px; font-size: 14px; color: #1d4ed8">
+            Donation Summary
+          </p>
+          <p style="margin: 4px 0; font-size: 16px">
+            <strong>Amount:</strong> {{amount}}
+          </p>
+          <p style="margin: 4px 0; font-size: 16px">
+            <strong>Currency:</strong> {{currency}}
+          </p>
+        </div>
+
+        <p
+          style="
+            margin: 20px 0 0;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #64748b;
+          "
+        >
+          Please keep this information for your records and follow up as needed.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

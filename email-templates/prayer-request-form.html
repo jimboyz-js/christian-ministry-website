@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Prayer Request</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 24px;
+        color: #333;
+      }
+      .container {
+        max-width: 650px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+      }
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 32px 24px;
+        text-align: center;
+      }
+      .content {
+        padding: 28px 24px;
+      }
+      .badge {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: #e8f5e9;
+        color: #2e7d32;
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+      .field {
+        margin-bottom: 18px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #e8e8e8;
+      }
+      .label {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #667eea;
+        margin-bottom: 6px;
+      }
+      .value {
+        background: #f8f9fa;
+        border-left: 4px solid #667eea;
+        border-radius: 8px;
+        padding: 12px;
+        color: #333;
+        line-height: 1.6;
+        word-break: break-word;
+      }
+      .footer {
+        background: #f8f9fa;
+        padding: 20px 24px;
+        text-align: center;
+        color: #666;
+        font-size: 13px;
+      }
+      a {
+        color: #667eea;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 style="margin: 0; font-size: 26px">🙏 New Prayer Request</h1>
+        <p style="margin: 6px 0 0; opacity: 0.95">
+          Christian Ministry Website Media Ministry
+        </p>
+      </div>
+      <div class="content">
+        <div class="badge">✓ Prayer request received</div>
+        <p style="margin-bottom: 20px; color: #555">
+          A new prayer request has been submitted. Please review the details
+          below.
+        </p>
+        <div class="field">
+          <div class="label">Name</div>
+          <div class="value">{{from_name}}</div>
+        </div>
+        <div class="field">
+          <div class="label">Email</div>
+          <div class="value">
+            <a href="mailto:{{from_email}}">{{from_email}}</a>
+          </div>
+        </div>
+        <div class="field">
+          <div class="label">Prayer Type</div>
+          <div class="value">{{prayer_type}}</div>
+        </div>
+        <div
+          class="field"
+          style="border-bottom: none; margin-bottom: 0; padding-bottom: 0"
+        >
+          <div class="label">Prayer Request</div>
+          <div class="value">{{message}}</div>
+        </div>
+      </div>
+      <div class="footer">
+        <p><strong>Christian Ministry Website</strong></p>
+        <p style="margin-top: 6px">Please respond with care and compassion.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Contact Form Submission</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Header Section */
+      .email-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .email-header h1 {
+        font-size: 28px;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+
+      .email-header p {
+        font-size: 14px;
+        opacity: 0.95;
+      }
+
+      /* Content Section */
+      .email-content {
+        padding: 40px 30px;
+      }
+
+      .greeting {
+        color: #667eea;
+        font-size: 16px;
+        margin-bottom: 24px;
+      }
+
+      .greeting strong {
+        font-weight: 600;
+      }
+
+      /* Field Sections */
+      .field-group {
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .field-group:last-of-type {
+        border-bottom: none;
+      }
+
+      .field-label {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+      }
+
+      .field-value {
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        word-break: break-word;
+        padding: 12px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #667eea;
+      }
+
+      /* Footer Section */
+      .email-footer {
+        background: #f8f9fa;
+        padding: 30px;
+        text-align: center;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      .footer-divider {
+        height: 1px;
+        background: #e0e0e0;
+        margin: 20px 0;
+      }
+
+      .footer-text {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 12px;
+      }
+
+      .footer-text a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .footer-text a:hover {
+        text-decoration: underline;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        margin-top: 12px;
+        transition: transform 0.3s ease;
+      }
+
+      .cta-button:hover {
+        transform: scale(1.05);
+      }
+
+      /* Social Links */
+      .social-links {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      .social-links p {
+        font-size: 12px;
+        color: #666;
+        margin-bottom: 8px;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+      }
+
+      .social-icon {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        line-height: 32px;
+        text-align: center;
+      }
+
+      .social-icon a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        .email-content {
+          padding: 20px 15px;
+        }
+
+        .email-header {
+          padding: 30px 15px;
+        }
+
+        .email-header h1 {
+          font-size: 24px;
+        }
+
+        .field-value {
+          font-size: 14px;
+        }
+      }
+
+      /* Badge Styling */
+      .success-badge {
+        display: inline-block;
+        background: #e8f5e9;
+        border: 1px solid #4caf50;
+        color: #2e7d32;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <!-- Header -->
+      <div class="email-header">
+        <h1>✉️ New Contact Form Submission</h1>
+        <p>Christian Ministry Website</p>
+      </div>
+
+      <!-- Content -->
+      <div class="email-content">
+        <!-- Success Badge -->
+        <div class="success-badge">✓ Verified Submission</div>
+
+        <!-- Greeting -->
+        <div class="greeting">
+          Hello <strong>Christian Ministry Website Team</strong>,
+        </div>
+
+        <p style="margin-bottom: 24px; color: #555; font-size: 15px">
+          You have received a new contact form submission. Please review the
+          details below and respond appropriately.
+        </p>
+
+        <!-- Fields -->
+        <div class="field-group">
+          <div class="field-label">👤 Name</div>
+          <div class="field-value">{{from_name}}</div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">📧 Email Address</div>
+          <div class="field-value">
+            <a
+              href="mailto:{{from_email}}"
+              style="color: #667eea; text-decoration: none"
+            >
+              {{from_email}}
+            </a>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">💬 Message</div>
+          <div class="field-value">{{message}}</div>
+        </div>
+
+        <!-- CTA -->
+        <div
+          style="
+            margin: 30px 0;
+            padding: 20px;
+            background: #f0f4ff;
+            border-radius: 8px;
+            text-align: center;
+          "
+        >
+          <p style="color: #333; margin-bottom: 12px; font-size: 14px">
+            <strong>Ready to respond?</strong>
+          </p>
+          <a href="mailto:{{from_email}}" class="cta-button"
+            >Reply to {{from_name}}</a
+          >
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="email-footer">
+        <p class="footer-text">
+          <strong>Christian Ministry Website Media Ministry</strong>
+        </p>
+        <p class="footer-text">
+          📧 Email:
+          <a href="mailto:ministry-email@gmail.com">ministry-email@gmail.com</a>
+        </p>
+
+        <!-- Social Links -->
+        <div class="social-links">
+          <p>Connect With Us:</p>
+          <div class="social-icons">
+            <div class="social-icon">
+              <a
+                href="https://www.facebook.com/profile.php?id=61590191527244"
+                title="Facebook"
+                >f</a
+              >
+            </div>
+            <div class="social-icon">
+              <a href="https://m.me/61590191527244" title="Messenger">m</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <p class="footer-text" style="font-size: 12px; color: #999">
+          © 2026 Christian Ministry Website Media Ministry. All rights
+          reserved.<br />
+          This is an automated email. Please do not reply to this message.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
