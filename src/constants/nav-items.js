@@ -23,6 +23,7 @@ const navItems = [
       },
       { label: "Category2", href: "/blog/category/category2" },
       { label: "Category3", href: "/blog/category/category3" },
+      { label: "Devotional", href: "/blog/category/devotional" },
       {
         label: "Sermons",
         submenu: [
