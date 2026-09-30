@@ -46,7 +46,6 @@ The app gives ministries a modern web presence with:
 - Server-side data fetching from Google Blogger API
 - Tailwind-based responsive styling
 - Metadata and social preview setup for SEO and sharing
-- Payment gateway integration scaffolding for PayMongo, PayPal, and Stripe
 
 ## Public version note
 
@@ -227,5 +226,3 @@ Please review the code and environment requirements carefully before deploying i
 Built for Christian ministry and discipleship communication using modern web technologies and open-source tooling.
 
 ---
-
-If you want, I can also create a second version of the README tailored specifically for GitHub profile presentation, with a more marketing-focused hero section and a screenshot section placeholder.
