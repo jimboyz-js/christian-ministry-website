@@ -33,7 +33,7 @@ export async function runNewsletter() {
         fromName:
           process.env.MAILERLITE_FROM_NAME || "Christian Ministry Website",
         fromEmail:
-          process.env.MAILERLITE_FROM_EMAIL || "hello@messagesofhope.org",
+          process.env.MAILERLITE_FROM_EMAIL || "hello@ministry-website.org",
         groupId: process.env.MAILERLITE_GROUP_ID,
         html,
       });
@@ -45,7 +45,7 @@ export async function runNewsletter() {
         fromName:
           process.env.MAILERLITE_FROM_NAME || "Christian Ministry Website",
         fromEmail:
-          process.env.MAILERLITE_FROM_EMAIL || "hello@messagesofhope.org",
+          process.env.MAILERLITE_FROM_EMAIL || "hello@ministry-website.org",
         html,
       });
 

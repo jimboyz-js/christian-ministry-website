@@ -34,7 +34,7 @@ export function generateNewsletterHTML(post) {
   const title = stripHtml(
     post?.title || "New article on Christian Ministry Website",
   );
-  const url = post?.url || "https://messagesofhope.org/blog";
+  const url = post?.url || "https://ministry-website.org/blog";
   const excerpt = getExcerpt(post);
   const image = getFeaturedImage(post);
 
@@ -62,7 +62,7 @@ export function generateNewsletterHTML(post) {
 
       <div style="padding:0 24px 24px; font-size:12px; color:#6b7280;">
         <p style="margin:0;">You are receiving this because you subscribed to Christian Ministry Website.</p>
-        <p style="margin:8px 0 0;"><a href="https://messagesofhope.org/unsubscribe" style="color:#0f766e;">Unsubscribe</a></p>
+        <p style="margin:8px 0 0;"><a href="https://ministry-website.org/unsubscribe" style="color:#0f766e;">Unsubscribe</a></p>
       </div>
     </div>
   </body>
