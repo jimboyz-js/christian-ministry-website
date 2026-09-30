@@ -154,8 +154,6 @@ MAILERLITE_API_END_POINT=https://connect.mailerlite.com/api
 MAILERLITE_API_TOKEN=your_mailerlite_token
 MAILERLITE_GROUP_ID=your_group_id
 
-# Bible API
-BIBLEQL_API_KEY=your_bible_api_key
 ```
 
 ### Optional payment-related variables
