@@ -11,6 +11,14 @@ A public open-source Christian ministry website built with Next.js, designed for
 
 This repository is a cleaned public version of a larger private project. Some branded assets, premium features, and production-only integrations have been intentionally removed or left out for open-source release.
 
+## Live Preview
+
+See the full-featured live demo of the project here:
+
+- https://messages-of-hope.vercel.app
+
+This preview showcases the complete feature set from the private production version, including the final UI and experience, and is useful for viewing the overall look and flow before adapting or deploying the public version.
+
 ## Why this project exists
 
 The app gives ministries a modern web presence with:
