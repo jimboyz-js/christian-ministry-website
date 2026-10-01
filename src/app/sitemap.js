@@ -42,18 +42,6 @@ export default async function sitemap() {
       changeFrequency: "weekly",
       priority: 0.9,
     },
-    {
-      url: `${BASE_URL}/listen`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/watch`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
     ...posts.map((post) => ({
       url: `${BASE_URL}/blog/post/${slugify(post.url)}--${post.id}`,
       lastModified: new Date(post.updated || post.published),
