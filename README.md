@@ -13,11 +13,11 @@ This repository is a cleaned public version of a larger private project. Some br
 
 ## Live Preview
 
-See the full-featured live preview of the project here:
+Live preview of the original full-featured project:
 
 - https://messages-of-hope.vercel.app
 
-This preview showcases the complete feature set from the private production version, including the final UI and experience, and is useful for viewing the overall look and flow before adapting or deploying the public version.
+This is the live production reference site for the complete feature set and final UI, not the open-source starter version in this repository.
 
 ## Why this project exists
 
