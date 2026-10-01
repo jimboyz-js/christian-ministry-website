@@ -13,7 +13,7 @@ This repository is a cleaned public version of a larger private project. Some br
 
 ## Live Preview
 
-See the full-featured live demo of the project here:
+See the full-featured live preview of the project here:
 
 - https://messages-of-hope.vercel.app
 
