@@ -11,7 +11,7 @@ const DOMAIN = process.env.DOMAIN_NAME;
 const PAGE_PATH = "/editorial-policy";
 const PAGE_TITLE = "Editorial Policy";
 const PAGE_DESCRIPTION =
-  "Learn how Christian Ministry Website researches, reviews, and publishes biblical, devotional, and ministry content with care and integrity.";
+  "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente ratione culpa omnis deserunt quaerat ut debitis vel, illum, pariatur fuga, consectetur minus alias praesentium nam nobis nulla sed in? Facilis?";
 export const metadata = {
   metadataBase: new URL(BASE_URL),
   title: PAGE_TITLE,
@@ -94,14 +94,16 @@ const EditorialPolicyPage = async () => {
           <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)]">
             <header className="border-b border-slate-200 bg-slate-50 px-6 py-8 md:px-10 md:py-10">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
-                Our standards
+                Editorial standards
               </p>
               <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
                 {editorialPolicy.title}
               </h1>
               <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
-                How we approach accuracy, biblical faithfulness, and integrity
-                in everything we publish.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Sapiente ratione culpa omnis deserunt quaerat ut debitis vel,
+                illum, pariatur fuga, consectetur minus alias praesentium nam
+                nobis nulla sed in? Facilis?
               </p>
               <p className="mt-6 text-sm text-slate-500">
                 Last updated{" "}

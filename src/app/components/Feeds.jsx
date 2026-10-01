@@ -9,11 +9,10 @@ const Feeds = ({ feeds }) => {
           Understanding RSS (Really Simple Syndication)
         </h1>
         <p className="mt-4 text-neutral-600">
-          RSS lets you receive timely updates from Christian Ministry Website
-          without visiting the site — subscribe once and new sermons, articles,
-          and or audio posts will arrive in your reader or podcast app
-          automatically. Use any RSS reader, podcast app, or browser to follow
-          the feeds below.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente
+          ratione culpa omnis deserunt quaerat ut debitis vel, illum, pariatur
+          fuga, consectetur minus alias praesentium nam nobis nulla sed in?
+          Facilis?
         </p>
         <p className="mt-3 text-sm text-neutral-500">
           Click a feed to open it in a new tab, or use the subscribe button to
