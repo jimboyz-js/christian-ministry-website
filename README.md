@@ -7,63 +7,11 @@
   <img src="https://img.shields.io/badge/License-Open%20Source-5E5E5E?style=for-the-badge" alt="Open source" />
 </p>
 
-A public open-source Christian ministry website built with Next.js, designed for churches, outreach ministries, and discipleship organizations to share Bible teachings, devotionals, sermon content, blog posts, and ministry updates.
+A Next.js 16 Christian ministry website powered by Google Blogger content. The project includes a public-facing blog, ministry pages, newsletter subscribe flow, contact form, donation page, RSS feed, and SEO-ready metadata.
 
-This repository is a cleaned public version of a larger private project. Some branded assets, premium features, and production-only integrations have been intentionally removed or left out for open-source release.
+## Overview
 
-## Live Preview
-
-Live preview of the original full-featured project:
-
-- https://messages-of-hope.vercel.app
-
-This is the live production reference site for the complete feature set and final UI, not the open-source starter version in this repository.
-
-## Why this project exists
-
-The app gives ministries a modern web presence with:
-
-- a responsive homepage and ministry landing pages
-- article/blog browsing powered by Blogger
-- sermon categories, archives, search, and related content
-- newsletter form support
-- contact form functionality
-- SEO-ready pages with metadata, sitemap, and robots support
-- optional donation/giving integration code for future setup
-
-## Features
-
-### Content & ministry site
-
-- Responsive homepage with hero section, featured post, mission/vision, recent posts, and verse highlighting
-- Blog archive, search, category, tag, and series pages
-- Individual post pages optimized for reading and SEO
-- Ministry pages including About, Contact, Donate, Statement of Faith, Editorial Policy, Privacy Policy, and Terms of Use
-- RSS feeds and sitemap support
-
-### Community tools
-
-- Newsletter signup flow powered by MailerLite
-- Contact form integrated through EmailJS
-- Social links and ministry contact details
-- Bible-related API endpoints and verse integrations
-
-### Technical highlights
-
-- Next.js App Router project structure
-- Server-side data fetching from Google Blogger API
-- Tailwind-based responsive styling
-- Metadata and social preview setup for SEO and sharing
-
-## Public version note
-
-This repository is intentionally a public-facing version of a larger private project. Some elements may be missing or placeholder-based, including:
-
-- proprietary brand graphics and photography
-- private ministry media and campaign content
-- production-only admin or CMS workflows
-- live credentials and private deployment configuration
-- business-specific integrations used in the full version
+This repository reflects the current app structure and routes that are actually present in the codebase. Some earlier templates and route references were removed or no longer used, so this README has been updated to match the real project.
 
 ## Tech stack
 
@@ -71,13 +19,13 @@ This repository is intentionally a public-facing version of a larger private pro
 - React 19
 - Tailwind CSS 4
 - Google Blogger API
-- Node.js server routes for API integrations
-- EmailJS for contact form submissions
-- MailerLite for newsletter subscriptions
-- SQLite support in codebase for internal tooling
-- PayMongo, PayPal, and Stripe integration code present but optional and credential-based
+- Node.js API routes
+- EmailJS
+- MailerLite
+- SQLite support for internal tooling
+- RSS generation with `rss`
 
-## Project structure
+## Current app structure
 
 ```text
 .
@@ -87,14 +35,56 @@ This repository is intentionally a public-facing version of a larger private pro
 ├── public/
 ├── src/
 │   ├── app/
-│   │   ├── api/
-│   │   ├── blog/
-│   │   ├── components/
 │   │   ├── about/
+│   │   ├── api/
+│   │   │   ├── blogger/
+│   │   │   │   ├── posts/
+│   │   │   │   └── posts/[postId]/
+│   │   │   ├── newsletter/
+│   │   │   │   └── run/
+│   │   │   └── subscribe/
+│   │   ├── blog/
+│   │   │   ├── archive/
+│   │   │   │   ├── [year]/
+│   │   │   │   └── [year]/[month]/
+│   │   │   ├── category/
+│   │   │   │   ├── [slug]/
+│   │   │   │   └── page.jsx
+│   │   │   ├── featured/
+│   │   │   ├── post/[postId]/
+│   │   │   ├── related/[slug]/
+│   │   │   ├── rss.xml/
+│   │   │   ├── search/
+│   │   │   ├── series/
+│   │   │   │   ├── [slug]/
+│   │   │   │   └── more-series-topic/[slug]/
+│   │   │   ├── tag/
+│   │   │   │   ├── [slug]/
+│   │   │   │   └── page.jsx
+│   │   │   ├── archive/page.jsx
+│   │   │   ├── category/page.jsx
+│   │   │   ├── featured/page.jsx
+│   │   │   ├── page.jsx
+│   │   │   ├── search/page.jsx
+│   │   │   ├── series/page.jsx
+│   │   │   └── tag/page.jsx
+│   │   ├── components/
 │   │   ├── contact/
 │   │   ├── donate/
+│   │   ├── editorial-policy/
+│   │   ├── feeds/
+│   │   ├── privacy-policy/
+│   │   ├── statement-of-faith/
+│   │   │   └── what-we-believe/
 │   │   ├── subscribe/
-│   │   └── ...
+│   │   │   └── thank-you/
+│   │   ├── terms-of-use/
+│   │   ├── globals.css
+│   │   ├── layout.js
+│   │   ├── not-found.jsx
+│   │   ├── page.js
+│   │   ├── robots.js
+│   │   └── sitemap.js
 │   ├── constants/
 │   ├── hooks/
 │   ├── lib/
@@ -105,19 +95,78 @@ This repository is intentionally a public-facing version of a larger private pro
 ├── jsconfig.json
 ├── postcss.config.mjs
 ├── eslint.config.mjs
-└── .gitignore
+├── .gitignore
+└── .env.example (if used in your local setup)
 ```
+
+## Current routes
+
+### Public pages
+
+- `/`
+- `/about`
+- `/contact`
+- `/donate`
+- `/blog`
+- `/blog/category`
+- `/blog/category/[slug]`
+- `/blog/featured`
+- `/blog/search`
+- `/blog/archive`
+- `/blog/archive/[year]`
+- `/blog/archive/[year]/[month]`
+- `/blog/series`
+- `/blog/series/[slug]`
+- `/blog/series/more-series-topic/[slug]`
+- `/blog/tag`
+- `/blog/tag/[slug]`
+- `/blog/post/[postId]`
+- `/blog/related/[slug]`
+- `/feeds`
+- `/statement-of-faith`
+- `/statement-of-faith/what-we-believe`
+- `/editorial-policy`
+- `/privacy-policy`
+- `/terms-of-use`
+- `/subscribe`
+- `/subscribe/thank-you`
+
+### API routes
+
+- `/api/blogger/posts`
+- `/api/blogger/posts/[postId]`
+- `/api/subscribe`
+- `/api/newsletter/run`
+- `/blog/rss.xml`
+
+> The project no longer includes some of the older public route references that were present in the older README copy. The current application matches the structure shown above.
+
+## Features
+
+- Responsive ministry landing page and homepage
+- Blog browsing with category, tag, archive, series, and featured content
+- Search and related-post functionality
+- Individual post pages with metadata support
+- Newsletter signup integration through MailerLite
+- Contact form using EmailJS
+- Donation/support page with integration placeholders
+- RSS feed generation for blog content
+- SEO metadata, sitemap, and robots file support
+
+## Content model
+
+The site is built around Google Blogger content. Posts are pulled from the configured Blogger blog and mapped into categories, tags, archives, searches, and series pages. The app expects a Blogger blog ID and API credentials to fetch content.
 
 ## Prerequisites
 
-Before running this project locally, make sure you have:
+Before running locally, make sure you have:
 
 - Node.js 20 or newer
-- npm (or another package manager like pnpm)
+- npm or another package manager
 - A Google Blogger blog and API access
-- Optional: EmailJS account for contact form functionality
-- Optional: MailerLite account for newsletter signup integration
-- Optional: payment provider credentials if you enable giving/donation features
+- Optional: EmailJS account
+- Optional: MailerLite account
+- Optional: SMTP or payment credentials depending on your planned integrations
 
 ## Installation
 
@@ -127,9 +176,7 @@ npm install
 
 ## Environment variables
 
-Create a `.env.local` file in the project root and add the required values for your deployment.
-
-Example:
+Create a `.env.local` file in the project root and add values like the following:
 
 ```env
 BASE_URL=http://localhost:3000
@@ -161,33 +208,37 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
 MAILERLITE_API_END_POINT=https://connect.mailerlite.com/api
 MAILERLITE_API_TOKEN=your_mailerlite_token
 MAILERLITE_GROUP_ID=your_group_id
+MAILERLITE_FROM_NAME=Christian Ministry Website
+MAILERLITE_FROM_EMAIL=hello@yourdomain.com
 
+# Optional email sending
+SMTP_USER=your_smtp_user
+SMTP_PASS=your_smtp_password
+EMAIL_RECEIVER=hello@yourdomain.com
 ```
 
-### Optional payment-related variables
+### Optional payment variables
 
-These are only relevant if you enable the donation or payment features in the app:
+These are only needed if donation or payment features are active:
 
 ```env
 STRIPE_SECRET_KEY=your_stripe_secret_key
 PAYPAL_CLIENT_ID=your_paypal_client_id
 PAYPAL_CLIENT_SECRET=your_paypal_secret
-PAYPAL_WEBHOOK_ID=your_webhook_id
+PAYPAL_WEBHOOK_ID=your_paypal_webhook_id
 PAYMONGO_SECRET_KEY=your_paymongo_secret_key
 PAYMONGO_WEBHOOK_SECRET=your_paymongo_webhook_secret
 ```
 
-> The public version is intentionally flexible. These variables may remain unused unless you activate those features.
-
 ## Running locally
 
-### Development mode
+### Development
 
 ```bash
 npm run dev
 ```
 
-Then open the site in your browser:
+Then open:
 
 ```text
 http://localhost:3000
@@ -206,29 +257,25 @@ npm run start
 npm run lint
 ```
 
-## Content model
+## Deployment notes
 
-This project is built around a Google Blogger content source. Posts, categories, tags, archives, pages, and featured material are pulled from the configured Blogger blog. If you want to use this with your own ministry content, update the blog ID, API keys, and labels accordingly.
+Before deploying, make sure to:
 
-## Notes for deployment
-
-Before launching a live version, review these items:
-
-- replace placeholder text and ministry branding
-- configure social media and contact information
-- set actual environment variables in your deployment platform
-- enable EmailJS and MailerLite if you want those flows active
-- confirm the proper Blogger blog ID and API credentials
-- disable or secure payment integrations unless they are intentionally used
+- replace placeholder ministry branding and copy
+- configure actual social media links and contact details
+- set real environment values on your hosting provider
+- enable EmailJS and MailerLite only if those flows are intended to work live
+- verify the Blogger blog ID and API key match the target content source
+- remove or secure any optional payment integrations you do not plan to use
 
 ## License
 
-This project is open-source and intended for learning, adaptation, and reuse in ministry or church website projects.
+This project is intended for ministry, church, and Christian content websites and can be adapted for learning, internal use, and public deployment.
 
-Please review the code and environment requirements carefully before deploying it publicly or in production.
+Please review the environment configuration and content source carefully before launching a public production site.
 
 ## Acknowledgements
 
-Built for Christian ministry and discipleship communication using modern web technologies and open-source tooling.
+Built for Christian discipleship, ministry communication, and digital outreach using modern web tools and open-source technology.
 
 ---
