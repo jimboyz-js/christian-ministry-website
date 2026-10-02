@@ -104,18 +104,16 @@ const WhatWeBelievePage = async () => {
           <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)]">
             <header className="border-b border-slate-200 bg-slate-50 px-6 py-8 md:px-10 md:py-10">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
-                Our Beliefs
-                {/* Biblical Foundations */}
+                Biblical Foundations
                 {/* What We Believe */}
               </p>
               <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
                 {biblicalBeliefPage.title}
               </h1>
               <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
-                We hold to the authority of Scripture and the core truths of the
-                Christian faith that guide our mission, teaching, and ministry.
-                {/* At the center of our ministry is the Bible, and these are the core convictions that shape our faith, teaching, and service. */}
-                {/* We believe in the authority of Scripture and the essential truths of the Christian faith that guide our worship, teaching, and service. */}
+                We believe in the authority of Scripture and the essential
+                truths of the Christian faith that guide our worship, teaching,
+                and service.
               </p>
               <p className="mt-6 text-sm text-slate-500">
                 Last updated{" "}
