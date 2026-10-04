@@ -139,7 +139,7 @@ This repository reflects the current app structure and routes that are actually 
 - `/api/newsletter/run`
 - `/blog/rss.xml`
 
-> The project no longer includes some of the older public route references that were present in the older README copy. The current application matches the structure shown above.
+> The project no longer includes some of the older public route references that were present in the older READMEs. The current application matches the structure shown above.
 
 ## Features
 
