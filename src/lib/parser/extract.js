@@ -22,6 +22,9 @@ export const extractFirstImage = (html) => {
 };
 
 export function extractAllImagesWithCheerio(content) {
+  if (content === null || content === undefined) {
+    content = "";
+  }
   const $ = cheerio.load(content);
   const images = [];
 
@@ -84,6 +87,9 @@ export function extractAllImagesWithCheerio(content) {
 
 // Features: META, KEYWORDS, ROBOTS, and GOOGLEBOT
 export function extractContentWithCheerio(content) {
+  if (content === null || content === undefined) {
+    content = "";
+  }
   const $ = cheerio.load(content);
 
   const images = [];
@@ -321,6 +327,9 @@ export function extractContentWithCheerio(content) {
 
 // remove the .separator wrapper
 export function getExtractedContent(content) {
+  if (content === null || content === undefined) {
+    content = "";
+  }
   const $ = cheerio.load(content);
 
   const firstImg = $("img").first();
